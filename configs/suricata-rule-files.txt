@@ -1,0 +1,4 @@
+# /etc/suricata/suricata.yaml - rule-files section after adding the custom rule file
+rule-files:
+  - suricata.rules                       # ET Open, written by suricata-update
+  - /etc/suricata/rules/local.rules      # custom lab rules (SID 1000001)

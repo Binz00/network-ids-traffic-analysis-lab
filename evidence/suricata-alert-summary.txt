@@ -1,0 +1,15 @@
+# Output of scripts/suricata-alert-summary.sh after 4 Nmap scans + 1 IDS test (2026-11-17)
+     36  [1:2034636:2] ET INFO Python SimpleHTTP ServerBanner
+     34  [1:2200025:2] SURICATA ICMPv4 unknown code
+     29  [1:2009358:8] ET SCAN Nmap Scripting Engine User-Agent Detected (Nmap Scripting Engine)
+      5  [1:2018489:4] ET SCAN NMAP OS Detection Probe
+      3  [1:2010939:3] ET SCAN Suspicious inbound to PostgreSQL port 5432
+      3  [1:2010937:3] ET SCAN Suspicious inbound to mySQL port 3306
+      3  [1:2010936:3] ET SCAN Suspicious inbound to Oracle SQL port 1521
+      3  [1:2010935:3] ET SCAN Suspicious inbound to MSSQL port 1433
+      3  [1:2002910:6] ET SCAN Potential VNC Scan 5800-5820
+      1  [1:2260002:1] SURICATA Applayer Detect protocol only one direction
+      1  [1:2260000:1] SURICATA Applayer Mismatch protocol both directions
+      1  [1:2100498:7] GPL ATTACK_RESPONSE id check returned root
+      1  [1:2019284:3] ET ATTACK_RESPONSE Output of id command from HTTP server
+      1  [1:2001219:20] ET SCAN Potential SSH Scan

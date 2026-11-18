@@ -1,0 +1,12 @@
+# /etc/suricata/suricata.yaml - values used in this lab (Suricata 8.0.8)
+
+# vars -> address-groups
+HOME_NET: "[192.168.64.10/32]"      # default was "[192.168.0.0/16,10.0.0.0/8,172.16.0.0/12]"
+EXTERNAL_NET: "!$HOME_NET"          # default, unchanged
+
+# af-packet capture interface (default, unchanged)
+af-packet:
+  - interface: eth0
+
+# rules
+default-rule-path: /var/lib/suricata/rules

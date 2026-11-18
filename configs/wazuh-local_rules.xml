@@ -1,0 +1,25 @@
+<!-- Wazuh manager: /var/ossec/etc/rules/local_rules.xml (Lab 2 additions) -->
+<!-- Raise the level of important Suricata alerts forwarded from eve.json -->
+<group name="suricata,custom_lab2,">
+
+  <!-- Suricata severity 1 (e.g. ET SCAN Nmap Scripting Engine User-Agent) -->
+  <rule id="100101" level="12">
+    <if_sid>86601</if_sid>
+    <field name="alert.severity">^1$</field>
+    <description>Suricata HIGH severity: $(alert.signature) from $(src_ip)</description>
+    <mitre>
+      <id>T1595</id>
+    </mitre>
+  </rule>
+
+  <!-- Any Emerging Threats SCAN signature -->
+  <rule id="100100" level="10">
+    <if_sid>86601</if_sid>
+    <field name="alert.signature">^ET SCAN</field>
+    <description>Suricata network scan: $(alert.signature) from $(src_ip)</description>
+    <mitre>
+      <id>T1046</id>
+    </mitre>
+  </rule>
+
+</group>
